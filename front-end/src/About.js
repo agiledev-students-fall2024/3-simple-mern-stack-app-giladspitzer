@@ -32,7 +32,7 @@ const About = props => {
   }
 
   useEffect(() => {
-    setTimeout(fetchAboutData, 3000)
+    setTimeout(fetchAboutData, 2000)
   }, [])
   if (error) {
     return (
