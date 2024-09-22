@@ -78,5 +78,27 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle fetching about data
+app.get('/about', async (req, res) => {
+  // some text I wrote about myself
+  const aboutText =
+    'Hi! My name is Gilad Spitzer. I am senior at NYU studying Computer Science. I am originally from Los Angeles, California. In my free time I love going to the beach, playing golf, taking long walks or hikes, cooking, and spending time with my friends and family. I am taking this class because I am interested not only in software engineering but also how to effectively communicate and work with others in a team setting. I am excited to learn more about the software development process and how to work with others to create a product that is useful and meaningful to others.'
+  // img url taken from google account profile pic
+  const imgUrl =
+    'https://lh3.googleusercontent.com/a/ACg8ocJ3-H-eADyEJVvFacz-angewSdJfdvOMEaiIk9gV-jf5E2O3lI=s83-c-mo'
+  try {
+    res.json({
+      aboutText,
+      imgUrl,
+    })
+  } catch (err) {
+    console.error(err)
+    res.status(400).json({
+      error: err,
+      status: 'failed to send about data',
+    })
+  }
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
