@@ -1,0 +1,73 @@
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-content img {
+    width: 15%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  .error-message {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .error-message p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .error-message button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .loading-placeholder {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-placeholder,
+  .text-placeholder {
+    background-color: #e0e0e0;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .image-placeholder {
+    width: 15%;
+    height: 115px;
+  }
+  
+  .text-placeholder {
+    width: 80%;
+    height: 215px;
+  }
+  
+  .image-placeholder,
+  .text-placeholder {
+    animation: placeholderShimmer 1.5s infinite;
+  }
+  
+  @keyframes placeholderShimmer {
+    0% {
+      background-position: -800px 0;
+    }
+    100% {
+      background-position: 800px 0;
+    }
+  }
+  
